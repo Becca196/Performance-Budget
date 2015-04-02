@@ -1,9 +1,9 @@
 /* Module.scss */
 
 nav[role="navigation"] ul {
-    background-color: $color;
+    background-color: #4e2e0d;
     list-style-type: none;
-    margin: 0 20px 0 0;
+    margin: 0;
     padding: 0 8px 4px 8px;
     @media screen and (min-width: 1024px) {
         max-width: 100%;
@@ -11,8 +11,12 @@ nav[role="navigation"] ul {
     }
 }
 
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
 nav[role="navigation"] ul li {
-    display: inline-block;
     margin: 0 0 0 8px;
     padding: 0;
 }
@@ -22,16 +26,16 @@ nav[role="navigation"] a {
     font-size: 18px;
     transition: color 300ms linear;
     &:hover {
-        color: darken(#fff,30%);
+        color: #b96b3a;
         transition: color 300ms linear;
     }
 }
 
-header[role="banner"] svg {
+header[role="banner"] {
     fill: $color;
-    @media screen and (min-width: 1024px) {
-        margin: 0;   
-    }
+    margin: 20px 0 20px 0;
+    padding: 8px 0 0 0;
+
 }
 
 main[role="main"] {
@@ -40,36 +44,46 @@ main[role="main"] {
 }
 
 .place-mark {
-    fill: $logo-color;
+    fill: #fff;
 }
 
-.cafe h1 svg, .food h1 svg, 
-.attractions h1 svg {
+.cafe h1 svg {
     height: em(16px);
     fill: $color;
     margin-right: em(6px);
 }
 
-.cafe h1, .food h1, .attractions h1,
-.cafe h2, .food h2, .attractions h2 {
-    font-size: em(50px);
+.cafe h1,
+.cafe h2 {
+    background-color: #4e2e0d;
+    padding: 12px 0px 12px 5px;
+    margin-top: 0;
+    width: 100%;
 }
 
-.cafe h1 a, .food h1 a, .attractions h1 a,
-.cafe h2 a, .food h2 a, .attractions h2 a {
-    color: $logo-color;
+.cafe h1 a,
+.cafe h2 a {
+    color: #fff;
     transition: color 300ms linear;
     &:hover {
-        color: darken($logo-color,8%);
+        color: #b96b3a;
         transition: color 300ms linear;
     }
 }
 
-.cafe-location, .food-location, .attraction-location {
+.cafe-location {
     margin-bottom: em(100px);
     &:last-of-type {
         margin-bottom: 0;
     }
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
 }
 
 //.cafe-location:last-of-type, .food-location:last-of-type, 
@@ -78,7 +92,7 @@ main[role="main"] {
 //}
 
 .street-address:before {
-    content: "a. ";
+    content: "address: ";
     @include headline-font;
 }
 
@@ -89,13 +103,13 @@ abbr[title] {
 .tel {
     display: block;
     &:before {
-        content: "p. ";
+        content: "phone: ";
         @include headline-font;
     }
 }
     
 footer[role="contentinfo"] {
-    background-color: $color;
+    background-color: #4e2e0d;
     color: #fff;
     font-size: 18px;
     padding: 10px;
@@ -116,7 +130,6 @@ footer[role="contentinfo"] ul {
 }
 
 footer[role="contentinfo"] ul li {
-    display: inline-block;
     margin: 0 4px 0 0;
     padding: 0;
 }
@@ -125,10 +138,11 @@ footer[role="contentinfo"] a {
     color: #fff;
     transition: color 300ms linear;
     &:hover {
-        color: darken(#fff,30%);
+        color: #b96b3a;
         transition: color 300ms linear;  
     }
 }
+
 
 .loading-icon {
     max-width: 200px;
@@ -139,4 +153,18 @@ p[data-lazy-load] {
     text-align: center;
 }
     
-    
+img[alt="Artifact's Exterior"] {
+    padding-bottom: 15px;
+}
+
+img[alt="Beans"] {
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+img[alt="Beans1"] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+}
